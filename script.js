@@ -35,3 +35,6 @@ console.log(getHumanChoice());
 
 getComputerChoice();
 // console.log(getComputerChoice());
+
+let humanScore = 0;
+let computerScore = 0;
