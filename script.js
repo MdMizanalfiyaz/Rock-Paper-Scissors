@@ -1,3 +1,6 @@
+let humanScore = 0;
+let computerScore = 0;
+
 function getComputerChoice(){
 
     let num = Math.floor(Math.random() * 3);
@@ -16,25 +19,34 @@ function getComputerChoice(){
 }
 
 function getHumanChoice(){
-    let humanChoice = prompt("Enter one of the fllowing value: ");
-    if(humanChoice === "rock"){
+    let playerChoice = prompt("Enter one of the fllowing value: ");
+    const playersChoice = /i playerChoice/;
+    if(playersChoice === "rock"||"ROCK"||"RocK"){
         return "rock";
-    } else if(humanChoice === "paper"){
+    } else if(playersChoice === "paper"||"PAPER"||"PapeR"){
         return "paper";
-    } else if(humanChoice === "scissors"){
+    } else if(playersChoice === "scissors"||"SCISSORS"||"ScissorS"){
         return "scissors";
     }
-    else{
-        return "invalid input";
-    }
+    // else{
+    //     return "invalid input";
+    // }
 }
 
 // getHumanChoice();
 console.log(getHumanChoice());
 
 
-getComputerChoice();
+// getComputerChoice();
 // console.log(getComputerChoice());
 
-let humanScore = 0;
-let computerScore = 0;
+
+
+function playRound(humanChoice,computerChoice) {
+    
+}
+
+const humanChoice = getHumanChoice();
+const computerChoice = getComputerChoice();
+
+playRound(humanChoice,computerChoice);
