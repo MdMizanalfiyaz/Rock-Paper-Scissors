@@ -20,21 +20,31 @@ function getComputerChoice(){
 
 function getHumanChoice(){
     let playerChoice = prompt("Enter one of the fllowing value: ");
-    const playersChoice = /i playerChoice/;
-    if(playersChoice === "rock"||"ROCK"||"RocK"){
+    if(playerChoice === "rock"){
         return "rock";
-    } else if(playersChoice === "paper"||"PAPER"||"PapeR"){
+    } else if(playerChoice === "paper"){
         return "paper";
-    } else if(playersChoice === "scissors"||"SCISSORS"||"ScissorS"){
+    } else if(playerChoice === "scissors"){
         return "scissors";
     }
+    else{
+        return "invalid input";
+    }
+    // const playersChoice = playerChoice;
+    // if(playerChoice === "rock"||"ROCK"||"RocK"){
+    //     return "rock";
+    // } else if(playerChoice === "paper"||"PAPER"||"PapeR"){
+    //     return "paper";
+    // } else if(playerChoice === "scissors"||"SCISSORS"||"ScissorS"){
+    //     return "scissors";
+    // }
     // else{
     //     return "invalid input";
     // }
 }
 
-// getHumanChoice();
-console.log(getHumanChoice());
+getHumanChoice();
+// console.log(getHumanChoice());
 
 
 // getComputerChoice();
@@ -49,4 +59,4 @@ function playRound(humanChoice,computerChoice) {
 const humanChoice = getHumanChoice();
 const computerChoice = getComputerChoice();
 
-playRound(humanChoice,computerChoice);
+// playRound(humanChoice,computerChoice);
