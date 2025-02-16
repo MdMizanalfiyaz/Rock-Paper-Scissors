@@ -1,13 +1,10 @@
-let humanScore = 0;
-let computerScore = 0;
-
 function getComputerChoice(){
 
     let num = Math.floor(Math.random() * 3);
 
-    if(num === 0){
+    if(num == 0){
         return "rock";
-    } else if(num === 1){
+    } else if(num == 1){
         return "paper";
     } 
     else{
@@ -17,46 +14,41 @@ function getComputerChoice(){
     
     
 }
+console.log(getComputerChoice());
+
 
 function getHumanChoice(){
-    let playerChoice = prompt("Enter one of the fllowing value: ");
-    if(playerChoice === "rock"){
-        return "rock";
-    } else if(playerChoice === "paper"){
-        return "paper";
-    } else if(playerChoice === "scissors"){
-        return "scissors";
-    }
-    else{
-        return "invalid input";
-    }
-    // const playersChoice = playerChoice;
-    // if(playerChoice === "rock"||"ROCK"||"RocK"){
-    //     return "rock";
-    // } else if(playerChoice === "paper"||"PAPER"||"PapeR"){
-    //     return "paper";
-    // } else if(playerChoice === "scissors"||"SCISSORS"||"ScissorS"){
-    //     return "scissors";
-    // }
-    // else{
-    //     return "invalid input";
-    // }
+    let playerChoice = prompt("Rock, paper, or Sicssors? ").toLowerCase();
+    return playerChoice;
 }
+console.log(getHumanChoice());
 
-getHumanChoice();
-// console.log(getHumanChoice());
+// getHumanChoice();
 
-
-// getComputerChoice();
-// console.log(getComputerChoice());
-
-
+let humanScore = 0;
+let computerScore = 0;
 
 function playRound(humanChoice,computerChoice) {
-    
+    if(humanChoice == computerChoice){
+        console.log("It's a Tie");        
+    } else if(humanChoice == "rock" && computerChoice === "paper"){
+        console.log("You lost");
+    } else if(humanChoice == "rock" && computerChoice === "sicssors"){
+        console.log("You won");
+    } else if(humanChoice == "paper" && computerChoice === "rock"){
+        console.log("You won");
+    } else if(humanChoice == "paper" && computerChoice === "sicssors"){
+        console.log("You lost");
+    } else if(humanChoice == "sicssors" && computerChoice === "paper"){
+        console.log("You won");
+    } 
+    else{
+        console.log("You lost");
+    }
 }
 
-const humanChoice = getHumanChoice();
+const humanChoice =  getHumanChoice();
+
 const computerChoice = getComputerChoice();
 
-// playRound(humanChoice,computerChoice);
+playRound(humanChoice,computerChoice);
